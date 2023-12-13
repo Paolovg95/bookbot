@@ -1,5 +1,7 @@
 # bookbot
 
+### Bookbot is a simple command-line program that reads text from a file and generates a report about the text.
+
 1. Read the book and get the words list. `get_words_list`
 2. Create empty dictionary with abecedary letters as keys: `create_abecedary_dict`
 3. Populate the abecedary dictionary with the count of letters as values: `populate_with_count`

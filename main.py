@@ -3,18 +3,18 @@ def main():
     BOOK_PATH = "books/frankenstein.txt"
 
     abecedary_dict = create_abecedary_dict(ABC)
-    word_count =  get_words_count(BOOK_PATH)
-    abecedary_dict = populate_with_count(word_count, abecedary_dict)
+    words =  get_words_list(BOOK_PATH)
+    abecedary_dict = populate_with_count(words, abecedary_dict)
     sorted_list = create_sorted_list_of_dict(abecedary_dict)
 
     # Print Report
-    print(f"--- Begin report of {BOOK_PATH} --- \n{len(word_count)} words found in the document\n")
+    print(f"--- Begin report of {BOOK_PATH} --- \n{len(words)} words found in the document\n")
     for item in sorted_list:
         print(f"The letter '{item['letter']}' was found {item['times']} times.")
     print("--- End report ---")
 
 # Return words list
-def get_words_count(path):
+def get_words_list(path):
     with open(path) as f:
         content = f.read()
         words = content.split()
